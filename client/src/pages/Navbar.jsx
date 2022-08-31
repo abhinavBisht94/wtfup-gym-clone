@@ -1,6 +1,9 @@
 import React from 'react';
 
+//~ importing Chakra
 import { Box, Image, Button } from '@chakra-ui/react';
+
+//~ importing Components
 import { NavBox } from '../Components/Navbar/NavBox';
 
 export const Navbar = () => {
@@ -24,10 +27,10 @@ export const Navbar = () => {
       <Box display="flex" justifyContent="space-evenly">
         <NavBox>Fitness</NavBox>
         <NavBox>Nutrient</NavBox>
-        <NavBox>Gyms</NavBox>
+        <NavBox borderBottom="2px solid red">Gyms</NavBox>
         <NavBox>Become WTF Partner</NavBox>
         <NavBox>About Us</NavBox>
-        <NavBox bg="red">Login</NavBox>
+        <NavBox bg="#920909">Login</NavBox>
       </Box>
     </Box>
   );
