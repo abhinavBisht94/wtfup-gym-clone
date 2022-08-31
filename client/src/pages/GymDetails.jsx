@@ -26,17 +26,21 @@ import { GymDetailsSearch } from '../Components/GymDetails/GymDetailsSearch';
 import { GymDetailsSidebar } from '../Components/GymDetails/GymDetailsSidebar';
 
 export const GymDetails = () => {
-  //! API Links
-  const { gymData, gymTerms } = links;
-
-  useEffect(() => {
-    dispatch(apiCall(gymData));
-  }, []);
-
   //! Redux
   const dispatch = useDispatch();
   const gymState = useSelector(state => state.gymRed);
-  console.log('gymState:', gymState);
+
+  //! API Links
+  const { gymData, gymTerms } = links;
+
+  //! Fetching data
+//   navigator.geolocation.getCurrentPosition(function(position) {
+//     console.log("Latitude is :", position.coords.latitude);
+//     console.log("Longitude is :", position.coords.longitude);
+//   });
+  useEffect(() => {
+    dispatch(apiCall(gymData));
+  }, []);
 
   return (
     <Box w="90%" m="5rem auto">
@@ -88,13 +92,13 @@ export const GymDetails = () => {
                         {elem.rating == 0 ? (
                           <Image
                             src="https://i.ibb.co/mNgzv9B/stars-white.png"
-                            alt="free gif"
+                            alt="stars"
                             w="5rem"
                           />
                         ) : (
                           <Image
                             src="https://i.ibb.co/bKKHS80/stars-gold.png"
-                            alt="free gif"
+                            alt="stars"
                             w="5rem"
                           />
                         )}

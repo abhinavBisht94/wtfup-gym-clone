@@ -1,7 +1,7 @@
 import React from 'react';
 
 //~ importing Chakra
-import { Box, Image, Button } from '@chakra-ui/react';
+import { Box, Image } from '@chakra-ui/react';
 
 //~ importing Components
 import { NavBox } from '../Components/Navbar/NavBox';
@@ -12,11 +12,11 @@ export const Navbar = () => {
       display="flex"
       justifyContent="space-around"
       textAlign="center"
-      bg="#0d0d0d"
+      bg="black"
       color="white"
+      position="sticky"
+      top="0"
     >
-      {/* https://i.ibb.co/Xbs0nT9/wtf-gym-white.jpg */}
-
       <Image
         src="https://i.ibb.co/9HDXLx8/wtf-gym-white.png"
         alt="WTF Logo"

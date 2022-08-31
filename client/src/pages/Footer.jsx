@@ -1,7 +1,7 @@
 import React from 'react';
 
 //~ importing Chakra
-import { Box, Image, Button, Text } from '@chakra-ui/react';
+import { Box, Image, Text } from '@chakra-ui/react';
 
 export const Footer = () => {
   //* common CSS variables
